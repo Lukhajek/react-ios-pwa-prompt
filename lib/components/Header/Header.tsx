@@ -10,6 +10,7 @@ type Props = {
   copyTitle: string;
   onClose: (evt: React.MouseEvent<HTMLElement>) => void;
   timeToClose: number;
+  isOpen: boolean;
 };
 
 export const Header = ({
@@ -18,9 +19,14 @@ export const Header = ({
   copyTitle,
   onClose,
   timeToClose,
+  isOpen,
 }: Props) => {
   const [percentage, setPercentage] = useState<number>(0);
   useEffect(() => {
+    if (!isOpen) {
+      setPercentage(0);
+      return;
+    }
     const interval = setInterval(() => {
       setPercentage((prev) => {
         if (prev >= 100) {
@@ -33,7 +39,7 @@ export const Header = ({
     }, 200);
 
     return () => clearInterval(interval);
-  });
+  }, [isOpen, timeToClose]);
 
   return (
     <div className={`${styles.header} iOSPWA-header`}>
@@ -60,7 +66,8 @@ export const Header = ({
             value={percentage}
             styles={buildStyles({
               pathColor: `rgba(62, 152, 199, ${percentage / 100})`,
-              pathTransitionDuration: 0.5,
+              pathTransitionDuration: 0.2,
+              pathTransition: "linear",
             })}
           />
         </div>

@@ -1,9 +1,9 @@
-import { jsxs as g, jsx as u } from "react/jsx-runtime";
+import { jsxs as g, jsx as p } from "react/jsx-runtime";
 import R, { useState as O, useEffect as w } from "react";
 import { CloseButton as E } from "../CloseButton/CloseButton.js";
 import '../../assets/Header.css';var v = {};
 Object.defineProperty(v, "__esModule", { value: !0 });
-var s = R;
+var l = R;
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation. All rights reserved.
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use
@@ -54,8 +54,8 @@ function T(t, a) {
 }
 var W = 100, N = 100, P = 50, b = 50, C = 50;
 function x(t) {
-  var a = t.className, r = t.counterClockwise, e = t.dashRatio, n = t.pathRadius, i = t.strokeWidth, l = t.style;
-  return s.createElement("path", { className: a, style: Object.assign({}, l, V({ pathRadius: n, dashRatio: e, counterClockwise: r })), d: S({
+  var a = t.className, r = t.counterClockwise, e = t.dashRatio, n = t.pathRadius, i = t.strokeWidth, o = t.style;
+  return l.createElement("path", { className: a, style: Object.assign({}, o, V({ pathRadius: n, dashRatio: e, counterClockwise: r })), d: S({
     pathRadius: n,
     counterClockwise: r
   }), strokeWidth: i, fillOpacity: 0 });
@@ -86,17 +86,17 @@ var _ = function(t) {
   }, a.prototype.getPathRadius = function() {
     return P - this.props.strokeWidth / 2 - this.getBackgroundPadding();
   }, a.prototype.getPathRatio = function() {
-    var r = this.props, e = r.value, n = r.minValue, i = r.maxValue, l = Math.min(Math.max(e, n), i);
-    return (l - n) / (i - n);
+    var r = this.props, e = r.value, n = r.minValue, i = r.maxValue, o = Math.min(Math.max(e, n), i);
+    return (o - n) / (i - n);
   }, a.prototype.render = function() {
-    var r = this.props, e = r.circleRatio, n = r.className, i = r.classes, l = r.counterClockwise, o = r.styles, c = r.strokeWidth, h = r.text, d = this.getPathRadius(), f = this.getPathRatio();
-    return s.createElement(
+    var r = this.props, e = r.circleRatio, n = r.className, i = r.classes, o = r.counterClockwise, s = r.styles, c = r.strokeWidth, u = r.text, h = this.getPathRadius(), f = this.getPathRatio();
+    return l.createElement(
       "svg",
-      { className: i.root + " " + n, style: o.root, viewBox: "0 0 " + W + " " + N, "data-test-id": "CircularProgressbar" },
-      this.props.background ? s.createElement("circle", { className: i.background, style: o.background, cx: b, cy: C, r: P }) : null,
-      s.createElement(x, { className: i.trail, counterClockwise: l, dashRatio: e, pathRadius: d, strokeWidth: c, style: o.trail }),
-      s.createElement(x, { className: i.path, counterClockwise: l, dashRatio: f * e, pathRadius: d, strokeWidth: c, style: o.path }),
-      h ? s.createElement("text", { className: i.text, style: o.text, x: b, y: C }, h) : null
+      { className: i.root + " " + n, style: s.root, viewBox: "0 0 " + W + " " + N, "data-test-id": "CircularProgressbar" },
+      this.props.background ? l.createElement("circle", { className: i.background, style: s.background, cx: b, cy: C, r: P }) : null,
+      l.createElement(x, { className: i.trail, counterClockwise: o, dashRatio: e, pathRadius: h, strokeWidth: c, style: s.trail }),
+      l.createElement(x, { className: i.path, counterClockwise: o, dashRatio: f * e, pathRadius: h, strokeWidth: c, style: s.path }),
+      u ? l.createElement("text", { className: i.text, style: s.text, x: b, y: C }, u) : null
     );
   }, a.defaultProps = {
     background: !1,
@@ -123,18 +123,18 @@ var _ = function(t) {
     },
     text: ""
   }, a;
-}(s.Component);
+}(l.Component);
 function j(t) {
   t.children;
   var a = T(t, ["children"]);
-  return s.createElement(
+  return l.createElement(
     "div",
     { "data-test-id": "CircularProgressbarWithChildren" },
-    s.createElement(
+    l.createElement(
       "div",
       { style: { position: "relative", width: "100%", height: "100%" } },
-      s.createElement(_, y({}, a)),
-      t.children ? s.createElement("div", { "data-test-id": "CircularProgressbarWithChildren__children", style: {
+      l.createElement(_, y({}, a)),
+      t.children ? l.createElement("div", { "data-test-id": "CircularProgressbarWithChildren__children", style: {
         position: "absolute",
         width: "100%",
         height: "100%",
@@ -148,21 +148,21 @@ function j(t) {
   );
 }
 function D(t) {
-  var a = t.rotation, r = t.strokeLinecap, e = t.textColor, n = t.textSize, i = t.pathColor, l = t.pathTransition, o = t.pathTransitionDuration, c = t.trailColor, h = t.backgroundColor, d = a == null ? void 0 : "rotate(" + a + "turn)", f = a == null ? void 0 : "center center";
+  var a = t.rotation, r = t.strokeLinecap, e = t.textColor, n = t.textSize, i = t.pathColor, o = t.pathTransition, s = t.pathTransitionDuration, c = t.trailColor, u = t.backgroundColor, h = a == null ? void 0 : "rotate(" + a + "turn)", f = a == null ? void 0 : "center center";
   return {
     root: {},
     path: m({
       stroke: i,
       strokeLinecap: r,
-      transform: d,
+      transform: h,
       transformOrigin: f,
-      transition: l,
-      transitionDuration: o == null ? void 0 : o + "s"
+      transition: o,
+      transitionDuration: s == null ? void 0 : s + "s"
     }),
     trail: m({
       stroke: c,
       strokeLinecap: r,
-      transform: d,
+      transform: h,
       transformOrigin: f
     }),
     text: m({
@@ -170,7 +170,7 @@ function D(t) {
       fontSize: n
     }),
     background: m({
-      fill: h
+      fill: u
     })
   };
 }
@@ -182,7 +182,7 @@ function m(t) {
 var B = v.CircularProgressbar = _;
 v.CircularProgressbarWithChildren = j;
 var H = v.buildStyles = D;
-const L = "_header_1cbck_1", X = "_appInfo_1cbck_23", M = "_appIcon_1cbck_33", $ = "_appTitleContainer_1cbck_51", z = "_appTitle_1cbck_51", A = "_appSubtitle_1cbck_85", p = {
+const L = "_header_1cbck_1", X = "_appInfo_1cbck_23", M = "_appIcon_1cbck_33", $ = "_appTitleContainer_1cbck_51", z = "_appTitle_1cbck_51", A = "_appSubtitle_1cbck_85", d = {
   header: L,
   appInfo: X,
   appIcon: M,
@@ -194,20 +194,25 @@ const L = "_header_1cbck_1", X = "_appInfo_1cbck_23", M = "_appIcon_1cbck_33", $
   copySubtitle: a,
   copyTitle: r,
   onClose: e,
-  timeToClose: n
+  timeToClose: n,
+  isOpen: i
 }) => {
-  const [i, l] = O(0);
+  const [o, s] = O(0);
   return w(() => {
-    const o = setInterval(() => {
-      l((c) => c >= 100 ? (clearInterval(o), 100) : c + 100 / (n / 1e3) / 5);
+    if (!i) {
+      s(0);
+      return;
+    }
+    const c = setInterval(() => {
+      s((u) => u >= 100 ? (clearInterval(c), 100) : u + 100 / (n / 1e3) / 5);
     }, 200);
-    return () => clearInterval(o);
-  }), /* @__PURE__ */ g("div", { className: `${p.header} iOSPWA-header`, children: [
-    /* @__PURE__ */ g("div", { className: p.appInfo, children: [
-      /* @__PURE__ */ u("img", { className: p.appIcon, src: t }),
-      /* @__PURE__ */ g("div", { className: p.appTitleContainer, children: [
-        /* @__PURE__ */ u("span", { className: p.appTitle, children: r }),
-        /* @__PURE__ */ u("span", { className: p.appSubtitle, children: a })
+    return () => clearInterval(c);
+  }, [i, n]), /* @__PURE__ */ g("div", { className: `${d.header} iOSPWA-header`, children: [
+    /* @__PURE__ */ g("div", { className: d.appInfo, children: [
+      /* @__PURE__ */ p("img", { className: d.appIcon, src: t }),
+      /* @__PURE__ */ g("div", { className: d.appTitleContainer, children: [
+        /* @__PURE__ */ p("span", { className: d.appTitle, children: r }),
+        /* @__PURE__ */ p("span", { className: d.appSubtitle, children: a })
       ] })
     ] }),
     /* @__PURE__ */ g(
@@ -222,17 +227,18 @@ const L = "_header_1cbck_1", X = "_appInfo_1cbck_23", M = "_appIcon_1cbck_33", $
           justifyContent: "center"
         },
         children: [
-          /* @__PURE__ */ u("div", { style: { position: "absolute", width: "100%", height: "100%" }, children: /* @__PURE__ */ u(
+          /* @__PURE__ */ p("div", { style: { position: "absolute", width: "100%", height: "100%" }, children: /* @__PURE__ */ p(
             B,
             {
-              value: i,
+              value: o,
               styles: H({
-                pathColor: `rgba(62, 152, 199, ${i / 100})`,
-                pathTransitionDuration: 0.5
+                pathColor: `rgba(62, 152, 199, ${o / 100})`,
+                pathTransitionDuration: 0.2,
+                pathTransition: "linear"
               })
             }
           ) }),
-          /* @__PURE__ */ u(E, { disabled: i < 100, onClose: e })
+          /* @__PURE__ */ p(E, { disabled: o < 100, onClose: e })
         ]
       }
     )

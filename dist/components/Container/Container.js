@@ -42,7 +42,8 @@ import '../../assets/Container.css';const h = "_container_19eg9_1", j = "_noScro
           copySubtitle: u,
           copyTitle: S,
           onClose: v,
-          timeToClose: _
+          timeToClose: _,
+          isOpen: t
         }
       ),
       /* @__PURE__ */ o(l, {}),

@@ -68,6 +68,7 @@ export const Container = ({
           copyTitle={copyTitle}
           onClose={dismissPrompt}
           timeToClose={timeToClose}
+          isOpen={isOpen}
         />
         <Divider />
         <Description copyDescription={copyDescription} />

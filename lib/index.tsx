@@ -18,6 +18,7 @@ type Props = {
   timesToShow?: number;
   onClose?: () => void;
   isShown?: boolean;
+  timeToClose?: number;
 };
 
 const PWAPrompt = ({
@@ -32,6 +33,7 @@ const PWAPrompt = ({
   onClose = () => {},
   promptOnVisit = 2,
   timesToShow = 2,
+  timeToClose = 5000,
 }: Props) => {
   const { isValidOS } = useDeviceAndVersion();
   const { numberOfVisits, incrementNumberOfVisits } = useNumberOfVisits();
@@ -58,6 +60,7 @@ const PWAPrompt = ({
         copyAddToHomeScreenStep={copyAddToHomeScreenStep}
         onClose={onClose}
         appIconPath={appIconPath}
+        timeToClose={timeToClose}
       />
     );
   }

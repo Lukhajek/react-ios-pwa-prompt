@@ -52,5 +52,8 @@
     "vite": "^4.5.3",
     "vite-plugin-dts": "^3.7.3",
     "vite-plugin-lib-inject-css": "^2.0.1"
+  },
+  "dependencies": {
+    "react-circular-progressbar": "^2.1.0"
   }
 }

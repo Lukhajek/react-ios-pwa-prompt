@@ -18,6 +18,7 @@ type Props = {
   copyTitle: string;
   delay: number;
   onClose: (evt: React.MouseEvent<HTMLElement>) => void;
+  timeToClose: number;
 };
 
 export const Container = ({
@@ -29,6 +30,7 @@ export const Container = ({
   copyTitle,
   delay,
   onClose,
+  timeToClose,
 }: Props) => {
   const [isOpen, setIsOpen] = useState(!Boolean(delay));
 
@@ -58,13 +60,14 @@ export const Container = ({
 
   return (
     <div className={styles.container}>
-      <Overlay isOpen={isOpen} onClose={dismissPrompt} />
+      <Overlay isOpen={isOpen} />
       <Panel isOpen={isOpen}>
         <Header
           appIconPath={appIconPath}
           copySubtitle={copySubtitle}
           copyTitle={copyTitle}
           onClose={dismissPrompt}
+          timeToClose={timeToClose}
         />
         <Divider />
         <Description copyDescription={copyDescription} />

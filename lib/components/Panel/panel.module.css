@@ -7,15 +7,16 @@
   overflow: hidden;
   position: fixed;
   transform: translateY(calc(100% + 10px));
-  transition: transform 0.4s cubic-bezier(0.4, 0.24, 0.3, 1);
+  box-shadow: none;
+  transition: all 0.4s cubic-bezier(0.4, 0.24, 0.3, 1);
   width: 100%;
-  box-shadow: 0 0px 100px rgba(0, 0, 0, 0.23), 0 0px 100px rgba(0, 0, 0, 0.23);
   z-index: 999999;
 }
 
 .panel.visible {
   display: block;
   transform: translateY(0);
+  box-shadow: 0 0px 100px rgba(0, 0, 0, 0.23), 0 0px 100px rgba(0, 0, 0, 0.23);
 }
 
 @media (prefers-color-scheme: light) {

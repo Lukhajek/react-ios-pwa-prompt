@@ -182,13 +182,13 @@ function m(t) {
 var B = v.CircularProgressbar = _;
 v.CircularProgressbarWithChildren = j;
 var H = v.buildStyles = D;
-const L = "_header_1cbck_1", X = "_appInfo_1cbck_23", M = "_appIcon_1cbck_33", $ = "_appTitleContainer_1cbck_51", z = "_appTitle_1cbck_51", A = "_appSubtitle_1cbck_85", d = {
+const L = "_header_1cbck_1", X = "_appInfo_1cbck_23", M = "_appIcon_1cbck_33", z = "_appTitleContainer_1cbck_51", A = "_appTitle_1cbck_51", $ = "_appSubtitle_1cbck_85", d = {
   header: L,
   appInfo: X,
   appIcon: M,
-  appTitleContainer: $,
-  appTitle: z,
-  appSubtitle: A
+  appTitleContainer: z,
+  appTitle: A,
+  appSubtitle: $
 }, U = ({
   appIconPath: t,
   copySubtitle: a,
@@ -232,7 +232,7 @@ const L = "_header_1cbck_1", X = "_appInfo_1cbck_23", M = "_appIcon_1cbck_33", $
             {
               value: o,
               styles: H({
-                pathColor: `rgba(62, 152, 199, ${o / 100})`,
+                pathColor: "rgba(10, 132, 255)",
                 pathTransitionDuration: 0.2,
                 pathTransition: "linear"
               })

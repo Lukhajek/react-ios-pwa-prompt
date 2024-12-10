@@ -65,7 +65,7 @@ export const Header = ({
           <CircularProgressbar
             value={percentage}
             styles={buildStyles({
-              pathColor: `rgba(10, 132, 255)`,
+              pathColor: `rgba(10, 132, 255, ${percentage / 100})`,
               pathTransitionDuration: 0.2,
               pathTransition: "linear",
             })}
